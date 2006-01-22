@@ -7,13 +7,13 @@
 %define		pnam	AIO
 Summary:	IO::AIO - perl Asynchronous Input/Output
 Name:		perl-IO-AIO
-Version:	1.5
+Version:	1.71
 Release:	0.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	eec38737bc5a5f7f16f71574488f086d
+# Source0-md5:	c256b5e48e40a60e90aa7562abbcd70f
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
