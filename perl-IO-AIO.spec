@@ -5,7 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	IO
 %define		pnam	AIO
-Summary:	IO::AIO - perl Asynchronous Input/Output
+Summary:	IO::AIO - Perl Asynchronous Input/Output
+Summary(pl):	IO::AIO - asynchroniczne wej¶cie/wyj¶cie w Perlu
 Name:		perl-IO-AIO
 Version:	1.71
 Release:	0.1
@@ -21,6 +22,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This module implements asynchronous I/O using whatever means your
 operating system supports.
+
+%description -l pl
+Ten modu³ implementuje asynchroniczne we/wy przy u¿yciu dowolnych
+metod obs³ugiwanych przez system operacyjny.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -48,5 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorarch}/IO/AIO.pm
 %dir %{perl_vendorarch}/auto/IO/AIO
-%{perl_vendorarch}/auto/IO/AIO/AIO.*
+%{perl_vendorarch}/auto/IO/AIO/AIO.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/IO/AIO/AIO.so
 %{_mandir}/man3/*
