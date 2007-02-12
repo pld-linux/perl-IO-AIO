@@ -6,7 +6,7 @@
 %define		pdir	IO
 %define		pnam	AIO
 Summary:	IO::AIO - Perl Asynchronous Input/Output
-Summary(pl):	IO::AIO - asynchroniczne wej∂cie/wyj∂cie w Perlu
+Summary(pl.UTF-8):   IO::AIO - asynchroniczne wej≈õcie/wyj≈õcie w Perlu
 Name:		perl-IO-AIO
 Version:	1.73
 Release:	0.1
@@ -23,9 +23,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module implements asynchronous I/O using whatever means your
 operating system supports.
 
-%description -l pl
-Ten modu≥ implementuje asynchroniczne we/wy przy uøyciu dowolnych
-metod obs≥ugiwanych przez system operacyjny.
+%description -l pl.UTF-8
+Ten modu≈Ç implementuje asynchroniczne we/wy przy u≈ºyciu dowolnych
+metod obs≈Çugiwanych przez system operacyjny.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
