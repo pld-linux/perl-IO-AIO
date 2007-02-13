@@ -6,7 +6,7 @@
 %define		pdir	IO
 %define		pnam	AIO
 Summary:	IO::AIO - Perl Asynchronous Input/Output
-Summary(pl.UTF-8):   IO::AIO - asynchroniczne wejście/wyjście w Perlu
+Summary(pl.UTF-8):	IO::AIO - asynchroniczne wejście/wyjście w Perlu
 Name:		perl-IO-AIO
 Version:	1.73
 Release:	0.1
