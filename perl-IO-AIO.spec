@@ -8,12 +8,12 @@
 Summary:	IO::AIO - Perl Asynchronous Input/Output
 Summary(pl.UTF-8):	IO::AIO - asynchroniczne wejście/wyjście w Perlu
 Name:		perl-IO-AIO
-Version:	3.17
+Version:	3.31
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/IO/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	8f1934012e223a9702242f8fd02a0a91
+# Source0-md5:	44d3ebf9e4b912b589264db2cf46b670
 URL:		http://search.cpan.org/dist/IO-AIO/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -52,6 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
+%attr(755,root,root) %{_bindir}/treescan
 %{perl_vendorarch}/IO/AIO.pm
 %dir %{perl_vendorarch}/auto/IO/AIO
 %{perl_vendorarch}/auto/IO/AIO/AIO.bs
