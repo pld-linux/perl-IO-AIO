@@ -58,6 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/treescan
 %{perl_vendorarch}/IO/AIO.pm
 %dir %{perl_vendorarch}/auto/IO/AIO
-%{perl_vendorarch}/auto/IO/AIO/AIO.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/IO/AIO/AIO.so
 %{_mandir}/man3/IO::AIO.3pm*
