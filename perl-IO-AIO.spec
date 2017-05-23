@@ -34,6 +34,7 @@ metod obsługiwanych przez system operacyjny.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
+PERL_CANARY_STABILITY_NOPROMPT=1 \
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 
