@@ -5,16 +5,18 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	IO
 %define		pnam	AIO
+%define		dist_ver	4.4
 Summary:	IO::AIO - Perl Asynchronous Input/Output
 Summary(pl.UTF-8):	IO::AIO - asynchroniczne wejście/wyjście w Perlu
 Name:		perl-IO-AIO
-Version:	4.4
+Version:	4.40
 Release:	1
-Epoch:		1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/IO/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/IO/%{pdir}-%{pnam}-%{dist_ver}.tar.gz
 # Source0-md5:	74d97a2a5162bbac5af79fa33f88c9d1
+Patch0:		%{pdir}-%{pnam}-path.patch
+Patch1:		%{pdir}-%{pnam}-version.patch
 URL:		http://search.cpan.org/dist/IO-AIO/
 BuildRequires:	perl-devel >= 1:5.8.2
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -32,7 +34,9 @@ Ten moduł implementuje asynchroniczne we/wy przy użyciu dowolnych
 metod obsługiwanych przez system operacyjny.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{dist_ver}
+%patch0 -p1
+%patch1 -p1
 
 %build
 PERL_CANARY_STABILITY_NOPROMPT=1 \

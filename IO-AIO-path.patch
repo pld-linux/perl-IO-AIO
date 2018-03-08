@@ -1,0 +1,9 @@
+diff -ur IO-AIO-4.4.orig/bin/treescan IO-AIO-4.4/bin/treescan
+--- IO-AIO-4.4.orig/bin/treescan	2017-12-18 12:58:00.000000000 +0000
++++ IO-AIO-4.4/bin/treescan	2018-03-08 12:44:41.045764429 +0000
+@@ -1,4 +1,4 @@
+-#!/opt/bin/perl
++#!/usr/bin/perl
+ 
+ # inspired by treescan by Jamie Lokier <jamie@imbolc.ucc.ie>
+ # about 40% faster than the original version (on my fs and raid :)
