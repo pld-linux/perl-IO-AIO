@@ -6,7 +6,7 @@ diff -ur IO-AIO-4.4.orig/AIO.pm IO-AIO-4.4/AIO.pm
  
  BEGIN {
 -   our $VERSION = 4.4;
-+   our $VERSION = 4.40;
++   our $VERSION = "4.40";
  
     our @AIO_REQ = qw(aio_sendfile aio_seek aio_read aio_write aio_open aio_close
                       aio_stat aio_lstat aio_unlink aio_rmdir aio_readdir aio_readdirx
@@ -30,7 +30,7 @@ diff -ur IO-AIO-4.4.orig/META.json IO-AIO-4.4/META.json
     },
     "release_status" : "stable",
 -   "version" : 4.4,
-+   "version" : 4.40,
++   "version" : "4.40",
     "x_serialization_backend" : "JSON::PP version 2.27300"
  }
 diff -ur IO-AIO-4.4.orig/META.yml IO-AIO-4.4/META.yml
