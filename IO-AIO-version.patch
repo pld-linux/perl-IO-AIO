@@ -1,45 +1,62 @@
-diff -ur IO-AIO-4.4.orig/AIO.pm IO-AIO-4.4/AIO.pm
---- IO-AIO-4.4.orig/AIO.pm	2018-02-20 05:44:15.000000000 +0000
-+++ IO-AIO-4.4/AIO.pm	2018-03-08 12:43:23.252765304 +0000
+diff -ur IO-AIO-4.6.orig/AIO.pm IO-AIO-4.6/AIO.pm
+--- IO-AIO-4.6.orig/AIO.pm	2018-08-25 19:59:07.000000000 +0000
++++ IO-AIO-4.6/AIO.pm	2018-08-27 09:01:07.184952791 +0000
 @@ -173,7 +173,7 @@
  use base 'Exporter';
  
  BEGIN {
--   our $VERSION = 4.4;
-+   our $VERSION = "4.40";
+-   our $VERSION = 4.6;
++   our $VERSION = 4.60;
  
     our @AIO_REQ = qw(aio_sendfile aio_seek aio_read aio_write aio_open aio_close
                       aio_stat aio_lstat aio_unlink aio_rmdir aio_readdir aio_readdirx
-diff -ur IO-AIO-4.4.orig/Changes IO-AIO-4.4/Changes
---- IO-AIO-4.4.orig/Changes	2018-02-20 06:54:29.000000000 +0000
-+++ IO-AIO-4.4/Changes	2018-03-08 12:43:12.604765424 +0000
-@@ -34,7 +34,7 @@
- TODO: define useful rules for [[$wd, $path], $path] &c and implement them
- TODO: https://github.com/coreutils/coreutils/blob/master/src/stat.c maybe IO::AIO::FSID
+diff -ur IO-AIO-4.6.orig/Changes IO-AIO-4.6/Changes
+--- IO-AIO-4.6.orig/Changes	2018-08-25 19:59:00.000000000 +0000
++++ IO-AIO-4.6/Changes	2018-08-27 09:00:48.752952999 +0000
+@@ -38,7 +38,7 @@
+ TODO: dup3, pipe2, accept4
+ TODO: dump config.log when automated testign and configure fails
+ 
+-4.6  Sat Aug 25 21:58:36 CEST 2018
++4.60 Sat Aug 25 21:58:36 CEST 2018
+ 	- add st_btime, st_btimesec, st_btimensec and st_gen accessors,
+           mostly for bsds which expose birthtime and st_gen members (netbsd, freebsd
+           but only st_gen on openbsd because they compiled their perl without support
+@@ -75,14 +75,14 @@
+ 	- removed non-portable C++ syntax from eio.c.
+         - try to fix readdir tests on cygwin spuriously failing.
+ 
+-4.5  Wed Aug  1 00:23:55 CEST 2018
++4.50 Wed Aug  1 00:23:55 CEST 2018
+ 	- aio_mtouch touch all pages as requested, not just the first page in most cases.
+         - new function: IO::AIO::mremap, linux-specific mremap, with constants MREMAP_MAYMOVE
+           and MREMAP_FIXED.
+         - add O_ACCMODE.
+ 	- add (undocumented) MSG_CMSG_CLOEXEC and SOCK_CLOEXEC constants.
  
 -4.4   Tue Feb 20 07:54:12 CET 2018
-+4.40  Tue Feb 20 07:54:12 CET 2018
++4.40 Tue Feb 20 07:54:12 CET 2018
  	- new aio_slurp request.
          - add (experimental) IO::AIO::eventfd and timerfd* function.
  	- add (experimental) IO::AIO::get_fdlimit and IO::AIO::min_fdlimit.
-diff -ur IO-AIO-4.4.orig/META.json IO-AIO-4.4/META.json
---- IO-AIO-4.4.orig/META.json	2018-02-20 06:54:40.000000000 +0000
-+++ IO-AIO-4.4/META.json	2018-03-08 12:43:18.204765361 +0000
+diff -ur IO-AIO-4.6.orig/META.json IO-AIO-4.6/META.json
+--- IO-AIO-4.6.orig/META.json	2018-08-25 19:59:10.000000000 +0000
++++ IO-AIO-4.6/META.json	2018-08-27 09:01:03.319952835 +0000
 @@ -38,6 +38,6 @@
        }
     },
     "release_status" : "stable",
--   "version" : 4.4,
-+   "version" : "4.40",
+-   "version" : 4.6,
++   "version" : 4.60,
     "x_serialization_backend" : "JSON::PP version 2.27300"
  }
-diff -ur IO-AIO-4.4.orig/META.yml IO-AIO-4.4/META.yml
---- IO-AIO-4.4.orig/META.yml	2018-02-20 06:54:40.000000000 +0000
-+++ IO-AIO-4.4/META.yml	2018-03-08 12:43:03.260765530 +0000
+diff -ur IO-AIO-4.6.orig/META.yml IO-AIO-4.6/META.yml
+--- IO-AIO-4.6.orig/META.yml	2018-08-25 19:59:10.000000000 +0000
++++ IO-AIO-4.6/META.yml	2018-08-27 09:00:20.352953319 +0000
 @@ -20,5 +20,5 @@
      - inc
  requires:
    common::sense: '0'
--version: 4.4
-+version: 4.40
+-version: 4.6
++version: 4.60
  x_serialization_backend: 'CPAN::Meta::YAML version 0.012'
