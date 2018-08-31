@@ -6,7 +6,7 @@ diff -ur IO-AIO-4.6.orig/AIO.pm IO-AIO-4.6/AIO.pm
  
  BEGIN {
 -   our $VERSION = 4.6;
-+   our $VERSION = 4.60;
++   our $VERSION = "4.60";
  
     our @AIO_REQ = qw(aio_sendfile aio_seek aio_read aio_write aio_open aio_close
                       aio_stat aio_lstat aio_unlink aio_rmdir aio_readdir aio_readdirx
@@ -47,7 +47,7 @@ diff -ur IO-AIO-4.6.orig/META.json IO-AIO-4.6/META.json
     },
     "release_status" : "stable",
 -   "version" : 4.6,
-+   "version" : 4.60,
++   "version" : "4.60",
     "x_serialization_backend" : "JSON::PP version 2.27300"
  }
 diff -ur IO-AIO-4.6.orig/META.yml IO-AIO-4.6/META.yml
@@ -58,5 +58,5 @@ diff -ur IO-AIO-4.6.orig/META.yml IO-AIO-4.6/META.yml
  requires:
    common::sense: '0'
 -version: 4.6
-+version: 4.60
++version: "4.60"
  x_serialization_backend: 'CPAN::Meta::YAML version 0.012'
