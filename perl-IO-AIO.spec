@@ -1,19 +1,20 @@
 #
 # Conditional build:
-%bcond_with	tests	# do not perform "make test"
+%bcond_with	tests	# unit tests
 #
 %define		pdir	IO
 %define		pnam	AIO
 Summary:	IO::AIO - Perl Asynchronous Input/Output
 Summary(pl.UTF-8):	IO::AIO - asynchroniczne wejście/wyjście w Perlu
 Name:		perl-IO-AIO
-Version:	4.76
-Release:	2
+Version:	4.79
+Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	https://www.cpan.org/modules/by-module/IO/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e297226cde0ae19c936ab0aaaa3930d9
+# Source0-md5:	851fac98cf21ed9c3d69a2ddc395bde6
 Patch0:		%{pdir}-%{pnam}-path.patch
+Patch1:		%{pdir}-%{pnam}-glibc.patch
 URL:		https://metacpan.org/dist/IO-AIO
 BuildRequires:	perl-Canary-Stability >= 2001
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.52
@@ -36,6 +37,7 @@ metod obsługiwanych przez system operacyjny.
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 PERL_CANARY_STABILITY_NOPROMPT=1 \
